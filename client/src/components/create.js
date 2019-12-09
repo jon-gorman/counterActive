@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 export default class Create extends Component {
   constructor(props){
     super(props);
-    this.onChangeDate = this.onChangeDate.bind(this)
+    this.onChangeDate = this.onChangeDate.bind(this);
     this.onChangePersonName = this.onChangePersonName.bind(this);
     this.onChangeItemAdded = this.onChangeItemAdded.bind(this);
     this.onChangeItemDepartment = this.onChangeItemDepartment.bind(this);
     this.onChangeItemWeight = this.onChangeItemWeight.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
 
 
     //STATE
     this.state = {
-      date: '',
+      date: new Date(),
       person_name: '',
       item_added: '',
       item_department: '',
@@ -71,10 +73,22 @@ export default class Create extends Component {
   //On Submit
   onSubmit(e){
     e.preventDefault();
-    console.log(`The values are ${this.state.date}, ${this.state.person_name}, 
-    ${this.state.item_added}, ${this.state.item_department}, ${this.state.item_weight}`);
+    const obj = {
+      date: this.state.date,
+      person_name: this.state.person_name,
+      item_added: this.state.item_added,
+      item_department: this.state.item_department,
+      item_weight: this.state.item_weight
+    };
+    axios.post('/order/add', obj)
+      .then(res => console.log(res.headers));
+      // .then(function(res){
+      //   console.log(res.headers)
+      // })
+    // console.log(`The values are ${this.state.date}, ${this.state.person_name},
+    // ${this.state.item_added}, ${this.state.item_department}, ${this.state.item_weight}`);
     this.setState({
-      date: '',
+      date: this.dateTime(),
       person_name: '',
       item_added: '',
       item_department: '',
@@ -94,11 +108,11 @@ export default class Create extends Component {
                 //make this auto fill with date and time javascript
                 type="text"
                 className="form-control col-md mr-0"
-                value={this.dateTime()
+                // value={this.dateTime()
                 // + ' @ ' + this.clockTime()
-                }
-
-                // onChange={this.onChangeShiftDate}
+                //}
+                value={this.state.date}
+                onChange={this.onChangeDate}
               />
             </div>
             <div className="form-group col-md mr-0">
@@ -156,6 +170,10 @@ export default class Create extends Component {
               {/*  onChange={this.onChangeShiftNotes}*/}
               {/*/>*/}
             </div>
+
+          </div>
+          <div className="form-group">
+            <input type="submit" value="Add Order" className="btn btn-primary"/>
           </div>
         </form>
       </div>
