@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Create from './components/create';
 import Edit from './components/edit';
-import Index from './components/index';
+import Outstanding from './components/outstanding';
+import Completed from './components/completed'
 
 // import './App.css';
 
@@ -24,7 +25,10 @@ class App extends Component {
                   <Link to={'/create'} className="nav-link">Create</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to={'/index'} className="nav-link">Index</Link>
+                  <Link to={'/outstanding'} className="nav-link">Outstanding</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to={'/completed'} className="nav-link">Completed</Link>
                 </li>
               </ul>
             </div>
@@ -33,7 +37,8 @@ class App extends Component {
           <Switch>
             <Route exact path='/create' component={ Create } />
             <Route exact path='/edit/:id' component={ Edit } />
-            <Route exact path='/index' component={ Index } />
+            <Route exact path='/outstanding' component={ Outstanding } />
+            <Route exact path='/completed' component={ Completed } />
           </Switch>
         </div>
       </Router>

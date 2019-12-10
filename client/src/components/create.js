@@ -116,7 +116,7 @@ export default class Create extends Component {
               />
             </div>
             <div className="form-group col-md mr-0">
-              <label>Name:  </label>
+              <label>Shopper:  </label>
               <input
                 // id="inputState"
                 type="text"

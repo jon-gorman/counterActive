@@ -7,7 +7,11 @@ let Order = new Schema({
     type: Date,
     default: Date.now
   },
+
   person_name: {
+    type: String,
+  },
+  counter_person_name:{
     type: String,
   },
   item_department: {
@@ -21,6 +25,9 @@ let Order = new Schema({
   item_weight: {
     type: Number,
 
+  },
+  item_actual:{
+    type: Number,
   },
 },
 {
