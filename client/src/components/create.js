@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import axios from 'axios';
 
 export default class Create extends Component {
@@ -173,7 +174,7 @@ export default class Create extends Component {
 
           </div>
           <div className="form-group">
-            <input type="submit" value="Add Order" className="btn btn-primary"/>
+            <Link to={'./completed'}><input type="submit" value="Add Order" className="btn btn-primary"/></Link>
           </div>
         </form>
       </div>
