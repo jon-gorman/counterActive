@@ -2,7 +2,7 @@ const express = require('express');
 const orderRoutes = express.Router();
 
 //Require the model in routes model
-let Order = require('./models/order.model');
+let Order = require('../Order.model');
 
 //Define Create route
 orderRoutes.route('/add').post(function(req, res){
