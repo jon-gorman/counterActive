@@ -51,13 +51,14 @@ export default class Completed extends Component {
             <th>Date</th>
             <th>Shopper</th>
             <th>Department</th>
+            <th>Team Member</th>
+            <th>Availability</th>
             <th>Item</th>
             <th>Requested Weight</th>
             <th>Actual Weight</th>
+            <th>Notes</th>
             <th>Edit</th>
             <th>Delete</th>
-
-
           </tr>
           </thead>
 

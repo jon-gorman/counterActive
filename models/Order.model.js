@@ -16,7 +16,6 @@ let Order = new Schema({
   },
   item_department: {
     type: String,
-
   },
   item_added: {
     type: String,
@@ -29,6 +28,12 @@ let Order = new Schema({
   item_actual:{
     type: Number,
   },
+  item_notes:{
+    type: String,
+  },
+  item_available:{
+    type: String,
+  }
 },
 {
   collection: 'order'

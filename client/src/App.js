@@ -11,6 +11,9 @@ import Edit from './components/edit';
 import Outstanding from './components/outstanding';
 import Completed from './components/completed';
 import Team from './components/team'
+import AmazonNavBar from "./components/amazonNav";
+import LandingNav from "./components/landingNav";
+import WholeFoodsNav from './components/wholeFoodsNav'
 
 // import './App.css';
 
@@ -27,39 +30,50 @@ componentWillMount() {
 
   render() {
       return (
+        <div className="container">
+
+
         <Router>
-          <div className="container">
-            <nav className="navbar navbar-expand-lg navbar-light bg-lite">
-              <Link to={'/'} className="navbar-brand">Counter Active</Link>
-              <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul className="navbar-nav mr-auto">
-                  <li className="nav-item">
-                    <Link to={'/'} className="nav-link">Home</Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link to={'/create'} className="nav-link">Create</Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link to={'/outstanding'} className="nav-link">Outstanding</Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link to={'/completed'} className="nav-link">Completed</Link>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-            <br/>
-            <br/>
             <Switch>
+              <Route path='/create' render={() =>
+                <div className='container'>
+                  <AmazonNavBar/>
+                  <Create/>
+                </div> }/>
+              <Route path='/completed' render={() =>
+                <div>
+                  <AmazonNavBar/>
+                  <Completed/>
+                </div>
+              }/>
+              <Route path='/outstanding' render={() =>
+                <div>
+                  <WholeFoodsNav/>
+                  <Outstanding/>
+                </div>
+              }/>
+              {/*<Route path='/edit/ + this.props.match.id' render={() =>*/}
+              {/*  <div>*/}
+              {/*    <WholeFoodsNav/>*/}
+              {/*    <Edit/>*/}
+              {/*  </div>*/}
+              {/*}/>*/}
               <Route exact path='/create' component={Create}/>
               <Route exact path='/edit/:id' component={Edit}/>
               <Route exact path='/outstanding' component={Outstanding}/>
               <Route exact path='/completed' component={Completed}/>
               {/*Only Display the JumboTron if on Home page :) */}
-              <Route path='/' render={() => <Team/>}/>
+              <Route path='/' render={() =>
+                <div className="container">
+                <LandingNav/>
+                <Team/>
+              </div>}/>
+
+
             </Switch>
-          </div>
+          {/*</div>*/}
         </Router>
+        </div>
       );
     }
 }

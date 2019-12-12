@@ -58,12 +58,14 @@ orderRoutes.route('/update/:id').post(function(req, res){
       res.status(404).send("data is not found");
     else {
       order.date = req.body.date;
-      order.counter_person_name = req.body.counter_person_name;
       order.person_name = req.body.person_name;
       order.item_department = req.body.item_department;
+      order.counter_person_name = req.body.counter_person_name;
+      order.item_available = req.body.item_available;
       order.item_added = req.body.item_added;
       order.item_weight = req.body.item_weight;
       order.item_actual = req.body.item_actual;
+      order.item_notes = req.body.item_notes;
       order.save().then(function(order){
         res.json('Update complete');
       })

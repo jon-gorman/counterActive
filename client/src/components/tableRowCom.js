@@ -29,6 +29,12 @@ class tableRowCom extends Component {
           {this.props.obj.item_department}
         </td>
         <td>
+          {this.props.obj.counter_person_name}
+        </td>
+        <td>
+          {this.props.obj.item_available}
+        </td>
+        <td>
           {this.props.obj.item_added}
         </td>
         <td>
@@ -36,6 +42,9 @@ class tableRowCom extends Component {
         </td>
         <td>
           {this.props.obj.item_actual}
+        </td>
+        <td>
+          {this.props.obj.item_notes}
         </td>
         <td>
           <Link to={"/edit/" + this.props.obj._id} className="btn btn-primary">Edit</Link>

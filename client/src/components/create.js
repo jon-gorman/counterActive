@@ -174,7 +174,7 @@ export default class Create extends Component {
 
           </div>
           <div className="form-group">
-            <Link to={'./completed'}><input type="submit" value="Add Order" className="btn btn-primary"/></Link>
+              <input type="submit" value="Add Order" className="btn btn-primary"/>
           </div>
         </form>
       </div>
