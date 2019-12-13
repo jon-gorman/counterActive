@@ -5,15 +5,15 @@ const cors = require('cors');
 const mongoose =  require('mongoose');
 const path = require('path')
 const orderRoute = require('./routes/order.route');
-require('dotenv').config();
+
 
 const app = express();
 app.use(bodyParser.json());
 
 //Mongoose
 mongoose.Promise = global.Promise;
-const db = require('./config/database').mongoURI;
-mongoose.connect(db, {
+const db = require('./config/database');
+mongoose.connect(db.mongoURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(function() {
