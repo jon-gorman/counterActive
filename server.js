@@ -5,7 +5,7 @@ const cors = require('cors');
 const mongoose =  require('mongoose');
 const path = require('path')
 const orderRoute = require('./routes/order.route');
-
+require('dotenv').config();
 
 const app = express();
 app.use(bodyParser.json());
