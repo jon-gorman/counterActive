@@ -12,12 +12,12 @@ app.use(bodyParser.json());
 
 //Mongoose
 mongoose.Promise = global.Promise;
-const db = require('./config/database');
-mongoose.connect(db.mongoURI, {
+const db = require('./config/database').mongoURI;
+mongoose.connect(db, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(function() {
-  console.log('Mongodb Connected')
+  console.log('Mongodb Connected', typeof db )
 }).catch(err => console.log(err));
 
 app.use(cors());
