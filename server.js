@@ -12,8 +12,8 @@ app.use(bodyParser.json());
 
 //Mongoose
 mongoose.Promise = global.Promise;
-const db = require('./config/database');
-mongoose.connect(db.mongoURI, {
+const db = require('./config/database').mongoURI;
+mongoose.connect(db, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(function() {
