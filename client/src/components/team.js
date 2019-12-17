@@ -18,7 +18,7 @@ export default class Team extends Component {
           <h1 className="display-4">Welcome to Counter Active</h1>
           <p className="lead">.</p>
           <hr className="my-4"/>
-          <div className="container" >
+          <div className="" >
             <p>Select your department to get started</p>
             <div className="card " style={{width: "18rem"}}>
               <Link to={'/create'}><img src={amazonLogo} className="card-img-top" alt=""/></Link>

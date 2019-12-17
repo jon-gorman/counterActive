@@ -30,9 +30,7 @@ componentWillMount() {
 
   render() {
       return (
-        <div className="container">
-
-
+        <div>
         <Router>
             <Switch>
               <Route path='/create' render={() =>
