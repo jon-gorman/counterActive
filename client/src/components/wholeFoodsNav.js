@@ -11,6 +11,7 @@ export default class WholeFoodsNav extends Component {
   }
   render(){
     return (
+
       <div className="container">
         <nav className="navbar navbar-expand-lg navbar-light bg-lite">
           <Link to={'/'} className="navbar-brand">Counter Active</Link>
