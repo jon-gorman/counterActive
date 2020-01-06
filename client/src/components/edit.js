@@ -230,6 +230,7 @@ export default class Edit extends Component {
                     value={this.state.item_available}
                     onChange={this.onChangeItemAvailable}
             >
+              <option className="form-control"> </option>
               <option className="form-control">Yes</option>
               <option className="form-control">No</option>
             </select>
