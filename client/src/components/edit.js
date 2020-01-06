@@ -186,6 +186,7 @@ export default class Edit extends Component {
                 //}
                 value={this.state.date}
                 onChange={this.onChangeDate}
+                readOnly
               />
             </div>
             <div className="form-group col-md mr-0">
@@ -196,21 +197,23 @@ export default class Edit extends Component {
                 className="form-control col-md mr-0"
                 value={this.state.person_name}
                 onChange={this.onChangePersonName}
+                readOnly
               />
             </div>
             <div className="form-group col-md ml-0">
               <label>Department: </label>
-              <select id="inputState"
+              <input id="inputState"
                       type="text"
                       className="form-control col-md ml-0"
                       value={this.state.item_department}
                       onChange={this.onChangeItemDepartment}
-              >
-                <option className="form-control">Department...</option>
-                <option className="form-control">Meat</option>
-                <option className="form-control">Seafood</option>
-                <option className="form-control">Deli</option>
-              </select>
+                     readOnly
+              />
+                {/*<option className="form-control">Department...</option>*/}
+                {/*<option className="form-control">Meat</option>*/}
+                {/*<option className="form-control">Seafood</option>*/}
+                {/*<option className="form-control">Deli</option>*/}
+              {/*</input>*/}
             </div>
             <div className="form-group col-md mr-0">
               <label>Team Member: </label>
@@ -220,6 +223,7 @@ export default class Edit extends Component {
                 className="form-control col-md mr-0"
                 value={this.state.counter_person_name}
                 onChange={this.onChangeCounterPersonName}
+                required
               />
             </div>
             <div>
@@ -229,6 +233,7 @@ export default class Edit extends Component {
                     className="form-control col-md ml-0"
                     value={this.state.item_available}
                     onChange={this.onChangeItemAvailable}
+                    required
             >
               <option className="form-control"> </option>
               <option className="form-control">Yes</option>
@@ -252,6 +257,7 @@ export default class Edit extends Component {
                      className="form-control"
                      value={this.state.item_weight}
                      onChange={this.onChangeItemWeight}
+                     readOnly
               >
               </input>
             </div>
@@ -262,6 +268,7 @@ export default class Edit extends Component {
                      className="form-control"
                      // value={this.state.item_actual}
                      onChange={this.onChangeItemActual}
+                     required
               >
               </input>
             </div>

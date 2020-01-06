@@ -57,7 +57,7 @@ export default class Completed extends Component {
             <th>Requested Weight</th>
             <th>Actual Weight</th>
             <th>Notes</th>
-            <th>Edit</th>
+            {/*<th>Edit</th>*/}
             <th>Delete</th>
           </tr>
           </thead>

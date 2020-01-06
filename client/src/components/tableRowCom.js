@@ -46,9 +46,9 @@ class tableRowCom extends Component {
         <td>
           {this.props.obj.item_notes}
         </td>
-        <td>
-          <Link to={"/edit/" + this.props.obj._id} className="btn btn-primary">Edit</Link>
-        </td>
+        {/*<td>*/}
+          {/*<Link to={"/edit/" + this.props.obj._id} className="btn btn-primary">Edit</Link>*/}
+        {/*</td>*/}
         <td>
           <button onClick={this.delete} className="btn btn-danger">Delete</button>
         </td>
