@@ -251,7 +251,7 @@ export default class Edit extends Component {
               </input>
             </div>
             <div className="form-group col-md ml-0">
-              <label>Weight Requested: </label>
+              <label>Weight: </label>
               <input id="inputState"
                      type="text"
                      className="form-control"
