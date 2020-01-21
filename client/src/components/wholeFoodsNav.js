@@ -21,7 +21,7 @@ export default class WholeFoodsNav extends Component {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
-                <Link to={'/'} className="nav-link">Home</Link>
+                <Link to={'/'} className="nav-link">Homes</Link>
               </li>
               <li className="nav-item">
                 <Link to={'/outstanding'} className="nav-link">Orders</Link>

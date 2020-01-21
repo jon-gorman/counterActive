@@ -96,7 +96,6 @@ export default class Create extends Component {
       item_weight: '',
     })
   }
-
   render() {
     return (
       <div style={{ marginTop: 10 }}>
