@@ -169,7 +169,7 @@ export default class Edit extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
       <WholeFoodsNav/>
       <div style={{marginTop: 10}}>
         <h3 align="center">Order to Complete</h3>
